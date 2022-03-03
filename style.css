@@ -1,49 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Forum&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@300;400&family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
-body{
-    width: 95vh;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
-    margin: 0;
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Forum', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Rubik', sans-serif;
-}
-h1{
-    color: aliceblue;
-    text-align: center;
+html {
+  box-sizing: border-box;
 }
 
-* {
-    /* Reset browser's padding and margin */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  background-repeat: no-repeats;
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  font-family: Nunito, sans-serif;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Container */
+.container {
+  min-width: 580px;
+  min-height: 304px;
+  color: black;
+  margin: 0 auto;
+  padding: 25px 50px;
+  border-radius: 5px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+}
+
+.input-container {
+  position: relative;
+  top: 20px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form {
+  width: 480px;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  outline: none;
+  font-family: Nunito, sans-serif;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  background: #006959;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+/* Countdown */
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 60px;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(233, 12, 12);
   }
+
+  25% {
+    color: rgb(214, 193, 0);
+  }
+
+  50% {
+    color: rgb(68, 231, 19);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(19, 79, 209);
+  }
+
+  100% {
+    color: rgb(188, 16, 211);
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  video {
+    object-fit: cover;
+    object-position: 70%;
+    margin-top: -1px;
+  }
+
+  .video-background {
+    height: 100vh;
+    width: 100vw;
+  }
+
   .container {
-    justify-content: space-between;
-    min-width: 580px;
-    min-height: 304px;
-    margin: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: unset;
+    width: 95vw;
+    min-height: 245px;
+    padding: 20px;
+    margin: 10px;
   }
 
-  .my-button {
-  
-    width: 200px;
-    height: 200px;
-    border: none;
-    border-radius: 100px;
-    outline: none;
-    background: #b71540;
-    color: white; 
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  .input-container {
+    top: unset;
   }
-  .my-button:hover {
-    background: #eb2f06;
+
+  .countdown {
+    position: relative;
+    top: 10px;
   }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 40px;
+  }
+}
