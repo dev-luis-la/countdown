@@ -9,7 +9,7 @@
     </head>
     <body> 
         <div class="container">
-            <div class="input-container" id="input-container">
+            <div class="input-container" id="input-container" hidden>
                 <h2>Create a Custom Countdown!</h2>
                 <form action="" class="form" id="countdownform">
                     <label for="title">Title</label>
@@ -19,8 +19,22 @@
                     <button type="submit">submit</button>
                 </form>
             </div>
-
+            <div class="countdown" id="countdown" hidden>
+                <h1 id="count-title">Count down</h1>
+                <ul>
+                    <li><span >3 days</span></li>
+                    <li><span >2 hours</span></li>
+                    <li><span>13 minutes</span></li>
+                </ul>
+                <button id="countdoen-button">reset</button>
+            </div>
+            <div class="complete" id="complete"> 
+                <h1 class="complete-title">Countdown complete</h1>
+                <h1 id="complete-ingo">Countdown Finished on 04-09-2022</h1>
+                <button id="complete-button">New Countdown</button>
+            </div>
         </div>
+       
         <script src="script.js"></script> 
     </body>
 </html>
