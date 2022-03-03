@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Forum&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:wght@300;400&family=Rubik&display=swap');
+
+body{
+    width: 95vh;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Forum', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+
+* {
+    /* Reset browser's padding and margin */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    justify-content: space-between;
+    min-width: 580px;
+    min-height: 304px;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-button {
+  
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    background: #b71540;
+    color: white; 
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  .my-button:hover {
+    background: #eb2f06;
+  }
