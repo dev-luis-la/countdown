@@ -165,12 +165,6 @@ li span {
     object-position: 70%;
     margin-top: -1px;
   }
-
-  .video-background {
-    height: 100vh;
-    width: 100vw;
-  }
-
   .container {
     min-width: unset;
     width: 95vw;
